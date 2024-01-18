@@ -1,0 +1,45 @@
+.container{
+    box-shadow: 7px -2px 4px rgba(198, 86, 86, 0.1), 0 8px 16px rgba(0, 0, 0, .1);
+    border-radius: 13px;
+    background-color: #443d3c;
+    color: #d0b4bc;
+    border: 2px solid black;
+    height: 900px;
+    width: 600px;
+    margin-top: 15px;
+}
+
+.h1-font {
+    font-family: 'DM Serif Display', serif;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #867b74;
+    
+
+}
+
+.subheading {
+    font-family: 'DM Serif Display', serif;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.login {
+
+    height: 500px;
+    width: 600px;
+}
+
+.margin {
+    margin-left: 14rem;
+}
+
+.btn {
+    overflow: hidden;
+    transition: all .15s ease
+}
+
+.icon-button{
+    color: rgb(103, 74, 130); 
+    background-color: #d0b4bc;
+}

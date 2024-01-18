@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign_up</title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="@fortawesome/fontawesome-free/css/all.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="stylesheet" href="form.css">
+  </head>
+
+<body>
+
+    <h1  class= "mb-4 mt-4 text-center h1-font">
+      <i>Welcome to Foodie..</i>
+      </h1>
+      <div  class= "container mt-2">
+        <h2  class= "text-center mb-3 subheading">Sign In</h2>
+        <p  class= "text-center">Please fill in the details</p>
+        <hr />
+        <div>
+          <form  class= "novalidate" onsubmit="validate()">
+             <!-- 2 column grid layout with text inputs for the first and last names --> 
+            <div  class= "row mb-1">
+              <div  class= "col">
+                <div  class= "form-outline">
+                  <label  class= "form-label" htmlFor="form3Example1">
+                    First name<label style= "color:red" >*</label>
+                  </label>
+                  <input
+                    type="text"
+                    id="fname"
+                     class= "form-control"
+                   
+                  />
+                </div>
+                
+              </div>
+              <!-- Last Name -->
+              <div  class= "col">
+                <div  class= "form-outline">
+                  <label  class= "form-label" htmlFor="form3Example2">
+                    Last name<label htmlFor="">*</label>
+                  </label>
+                  <input
+                    type="text"
+                    id="lname"
+                     class= "form-control"
+                  />
+                </div>
+                
+              </div>
+            </div>
+
+            
+            
+            <!-- Phone Number  -->
+            <div  class= "form-outline mb-4">
+              <label  class= "form-label" htmlFor="form3Example4">
+                Phone Number<label style= "color:red" >*</label>
+              </label>
+              <input
+                type="number"
+                id="pnumber"
+                 class= "form-control"
+                
+              />
+            </div>
+
+            <!-- Email input --> 
+            <div  class= "form-outline mb-4">
+              <label  class= "form-label" htmlFor="form3Example5">
+                Email<label style= "color:red" >*</label>
+              </label>
+              <input
+                type="text"
+                id="mail"
+                 class= "form-control"
+               
+              />
+            </div>
+
+           <!-- Password input --> 
+            <div  class= "form-outline mb-4">
+              <label  class= "form-label" htmlFor="form3Example6">
+                Password<label style= "color:red" >*</label>
+              </label>
+              <input
+                type="password"
+                id="password"
+                 class= "form-control"
+               
+              />
+            </div>
+            
+             <!--Confirm Password input --> 
+            <div  class= "form-outline mb-4  ">
+              <label  class= "form-label" htmlFor="form3Example7">
+                Confirm Password<label style= "color:red" >*</label>
+              </label>
+              <input
+                type="password" 
+                id="confirmpass"
+                 class= "form-control" 
+              />
+            </div>
+
+            <!-- Submit button --> 
+            <button type="submit"  class="btn btn-primary form-control mb-2">
+              Sign up
+            </button>
+
+
+
+            <div class="text-center">
+                    <p class="mt-3 mb-3">or sign up with:</p>
+                    <button type="button" class="btn btn-secondary btn-floating mx-1 icon-button">
+                        <i class="fab fa-facebook-f"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-secondary btn-floating mx-1 icon-button">
+                        <i class="fab fa-google"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-secondary btn-floating mx-1 icon-button">
+                        <i class="fab fa-twitter"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-secondary btn-floating mx-1 icon-button">
+                        <i class="fab fa-github"></i>
+                    </button>
+                </div>
+                <p class="text-center mt-3">
+                  Already a member?
+                  <a href="Log_In.html" type="button">
+                     LogIn
+                  </a>
+              </p>
+                
+             
+            </div>
+          </form>
+        </div>
+      </div>
+   
+    
+      <script>
+        function validate() {
+
+            var f_name = document.getElementById("fname").value;                  //first name
+            var l_name = document.getElementById("lname").value;                  //last name
+            var phone = document.getElementById("pnumber").value;         //phone number
+            var email = document.getElementById("mail").value;         //email
+            var pwrd = document.getElementById("password").value;          //password 
+            var cnfm_pwrd = document.getElementById("confirmpass").value;     //confirm password
+
+            if (!f_name || !email || !phone || !pwrd || !cnfm_pwrd) {
+                alert("Form is not completely filled");
+                return false;
+            }
+
+            if (f_name.length > 20) {
+                alert("First name should lie in between (1-20)");
+                return false;
+            }
+
+            if (l_name.length > 10) {
+                alert("Last name should lie in between (1-10)");
+                return false;
+            }
+
+            if(phone.length > 10){
+              alert("Phone number should be of 10 digits");
+              return false;
+            }
+            
+            if (!email.match(/^([A-z 0-9]{5,25})@([a-z]{5,10}).com$/)) {
+                alert("Please enter valid email");
+                return false;
+              }
+
+            if(pwrd.length > 10){
+              alert("Length of password should be 10");
+              return false;
+            }
+
+            if(!cnfm_pwrd.match(pwrd)){
+              alert("Confirm Password should match password");
+              return false;
+            }
+
+            alert("Form Submitted Successfully");
+            return true;
+            
+
+          }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+
+</html>

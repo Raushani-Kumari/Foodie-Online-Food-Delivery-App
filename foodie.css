@@ -1,0 +1,67 @@
+#logo_image {
+    height: 65px;
+    width: 65px;
+    border-radius: 20px;
+    display: flex;
+}
+
+.font-f{
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: 'DM Serif Display', serif;
+}
+.font{
+    font-size: 1.2rem;
+    /* font-weight: bold; */
+}
+.h1-font {
+    font-family: 'DM Serif Display', serif;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #867b74;
+    
+
+}
+.contact-flex{
+    display: flex;
+    direction: row;
+}
+
+.contact{
+    /* background: linear-gradient(to right,orange, rgb(164, 236, 196), rgba(225, 201, 80, 0.701) ); */
+    /* background: linear-gradient(to right, rgba(81, 48, 3, 0.811), rgba(182, 122, 115, 0.87)); */
+    background: linear-gradient(to right, rgb(180 142 89 / 81%), rgb(179 87 76 / 87%));
+}
+.logo_image{
+    height: 150px;
+    width: 150px;
+    border-radius: 20px;
+    display: flex;
+}
+.f-size{
+    font-size: 4rem;
+}
+
+.about img {
+    height: 130px;
+    width: 130px;
+    border-radius: 20px;
+    /* position: absolute; */
+    /* top: 50; */
+    /* right: 0; */
+
+}
+#h1-font{
+    padding: 18px;
+    text-align: center;
+}
+
+.about {
+    display: flex;
+    text-align: center;
+}
+.para{
+    padding: 7px;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif, Verdana, sans-serif;
+}

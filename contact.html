@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>contact us</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+ 
+  <link rel="stylesheet" href="foodie.css">
+</head>
+
+<body>
+  <div class="contact-flex ">
+    <img src="asset/logo.png" alt="logo" class="m-2 logo_image">
+    <h1 class=" p-4 mb-3 mt-2 h1-font f-size text-align-center">Help & Support</h1>
+    <!-- <a href="https://www.instagram.com" role="icon" class="fa-solid fa-handshake-angle m-2"></a> -->
+    <!-- <i class="fa-solid fa-handshake-angle m-2"></i> -->
+  </div>
+  <div class="p-2 contact">
+    <h3>Facing an issue ?</h3>
+    <h3>Reach out to us</h3>
+
+    <form onsubmit="contact_Validate()">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class=" font form-label">Enter your email address</label>
+      <input type="text" class="form-control" id="email" placeholder="name@example.com">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class=" font form-label">Write to us</label>
+      <textarea class="form-control" id="review" rows="8"></textarea>
+
+    </div>
+    <button type="submit" class="btn btn-success mb-2" >Submit</button>
+    </form>
+
+  </div>
+
+
+</body>
+<script>
+  function contact_Validate() {
+    var email = document.getElementById("email").value;
+    var text = document.getElementById("review").value;
+
+    if (!email || !text) {
+      alert("Please fill the form");
+      return false;
+    }
+
+    if (!email.match(/^([A-z 0-9]{5,25})@([a-z]{5,10}).com$/)) {
+      alert("Please enter valid email");
+      return false;
+    }
+
+    alert("Your feedback has been recorded");
+    return true;
+  }
+
+
+</script>
+
+</html>

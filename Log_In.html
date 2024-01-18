@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="@fortawesome/fontawesome-free/css/all.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="form.css">
+
+</head>
+
+<body>
+
+    <h1 class="mb-4 mt-4 text-center h1-font">
+        <i>Welcome to Foodie..</i>
+    </h1>
+    <div class="container login mt-2">
+        <h2 class="text-center mb-3 subheading">LogIn</h2>
+        <hr />
+        <div>
+            <form class="novalidate" onsubmit="login_Validate()">
+                <div class="form-outline mb-2">
+                    <label class="form-label" htmlFor="form3Example15">
+                        Email<label style="color: red;">*</label>
+                    </label>
+                    <input type="text" id="email" class="form-control" />
+                </div>
+
+                <!-- Password input -->
+                <div class="form-outline mb-2">
+                    <label class="form-label" htmlFor="form3Example16">
+                        Password<label style="color: red;">*</label>
+                    </label>
+                    <input type="password" id="password" class="form-control" />
+                </div>
+
+
+                <!-- Checkbox -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label mb-2" for="flexCheckDefault">
+                        Remember me
+                    </label>
+                </div>
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary form-control mb-2">
+                    Log in
+                </button>
+                <!-- Register buttons -->
+                <div class="text-center">
+                    <p class="mt-3 mb-3">or register with:</p>
+                    <button type="button" class="btn btn-secondary btn-floating mx-1 icon-button">
+                        <i class="fab fa-facebook-f"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-secondary btn-floating mx-1 icon-button">
+                        <i class="fab fa-google"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-secondary btn-floating mx-1 icon-button">
+                        <i class="fab fa-twitter"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-secondary btn-floating mx-1 icon-button">
+                        <i class="fab fa-github"></i>
+                    </button>
+                </div>
+                <p class="text-center mt-3">
+                    New member?
+                    <a href="Sign_up.html" type="button">
+                        Create new account
+                    </a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function login_Validate() {
+
+            var pswrd = (document.getElementById("password").value);         //password
+            var email = (document.getElementById("email").value);         //email
+
+            if (!email || !pswrd) {
+                alert("Form not filled completely");
+                return false;
+            }
+
+            if (!email.match(/^([A-z 0-9]{5,25})@([a-z]{5,10}).com$/)) {
+                alert("Please enter valid email");
+                return false;
+              }
+
+            alert("Form filled completely");
+            return true;
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
