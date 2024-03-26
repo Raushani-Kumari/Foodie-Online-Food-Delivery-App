@@ -1,0 +1,1 @@
+Foodie is an online food delivery website with the aim of reaching out to the remote locations as well as promoting small scale business of people with skills but with no resources. Foodie is one of my college project and the idea of making a food delivery app emerged in me and my friends after having the worst experience of PG food. 
